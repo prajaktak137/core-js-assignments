@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="slide-imgs" src="MyImages/waterfall.jpg" width="500" height="500" name="image"alt="" />
+    <script>
+        var image=document.getElementById("slide-imgs");
+        var img_array=["MyImages/waterfall.jpg","MyImages/img-2.jpg","MyImages/img-5.jpg","MyImages/img-1.jpg","MyImages/img-6.jpg","MyImages/flower garden.jpg","MyImages/beautiful flower.jpg","MyImages/blue flower.jpg","MyImages/img-4.jpg"];
+        var index=0;
+        function slide()
+        {
+            image.setAttribute("src",img_array[index]);
+            index++;
+            if(index>=img_array.length)
+            {
+            index=0;
+            }
+        }
+        setInterval("slide()",1000);
+        </script>
+</body>
+</html>
